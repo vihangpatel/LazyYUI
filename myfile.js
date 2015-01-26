@@ -107,9 +107,20 @@ function createFunctionDocBlock(key , matches , lineObject){
         }
     }
     
+    if(checkForReturn(key)){
+        text.push(' * @returns {[[Type]]} [[Description]]');   
+    }
+    
     text.push('*/');
     console.log(getYUITextFromArray(text , lineObject.indentation));
     insertYUIDocBlock(getYUITextFromArray(text , lineObject.indentation), lineObject.lineNo);
+}
+    
+function checkForReturn(key){
+    var blockText = code[key].toString(),
+        regExp = /return\s+/,
+        index = regExp.exec(blockText);
+    return !isNullOrUndefined(index);
 }
     
 function getCurrentFunctionObject(lineText){ 
