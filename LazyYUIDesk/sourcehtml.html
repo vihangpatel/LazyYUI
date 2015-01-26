@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Lazy YUI</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script src="jquery-1.8.3.js"></script>
+		<link rel="stylesheet" href="vs.css">
+		<script src="highlight.pack.js"></script>
+        <script src="constants.js"></script>
+        <script src="code.js"></script>
+        <script src="myfile.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id="input">
+			#$@#
+		</p>
+		<pre><code class="javascript" id = "output"></code></pre>
+	</body>
+
+</html>

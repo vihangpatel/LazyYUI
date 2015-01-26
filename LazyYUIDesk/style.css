@@ -1,0 +1,9 @@
+#input {
+	height : 1px;
+	width : 1px;
+	display : none;	
+}
+
+#output {
+	color : 'red';
+}
