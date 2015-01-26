@@ -4,38 +4,11 @@
     display : none;	
 }
 
-#main {
-    font-family: "Segoe UI Light","sans-serif";
-}
-
-
-#codecontainer{
-    top : -12px;
-    position: relative;
-}
-
-#output{
-    overflow: scroll;
-    height: calc(100% - 72px);
-    top : -10px;
-}
 
 #top{
     width: 100%;
     height: 100px;
     position: relative;
-    background: #009688;
-}
-
-#bottom {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    color: white;
-    text-align: center;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
     background: #009688;
 }
 
@@ -47,19 +20,18 @@
     top: -58px;
     background: white;
     border-radius: 3px;
-    border: 1px solid rgba(0,0,0,0.2);    
+    border: 1px solid rgba(0,0,0,0.2);
 } 
 
 #information{
     width: 20%;
     float: left;
     height: 100%;  position: relative;  margin: 0 auto;    z-index: 2;  border-radius: 3px;    -webkit-transform-origin: center;  -ms-transform-origin: center;  transform-origin: center;  -webkit-animation: app-enter .3s;    background-position: top left;  background-repeat: repeat-x;  background-color: #f7f7f7;
-
+    font-family: "Segoe UI Light","sans-serif";
 }
 
 #header{
     height: 72px;
-    line-height: 72px;
     position: relative;
     top: 0px;
     left: 0px;
@@ -83,21 +55,11 @@
     height: 100%;
     position: relative;
     float: left;
+    overflow: scroll;
 }
 
 .data {
-    width: 100%;
+    width: inherit;
     height: 35px;
     text-align: center;
-    line-height: 35px;
-}
-
-.bottomcredit {
-    bottom: 0px;
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    position: absolute;
-    font-size: 12px;
 }

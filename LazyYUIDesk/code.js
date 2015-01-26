@@ -2,7 +2,7 @@ var code = {
         $el: $('body'),
         activeScope: null,
         inactiveScope: null,
-        paperTool: false,
+        paperTool: null,
         pointCounts: 0,
         points: [],
         mode: 0,
@@ -49,7 +49,7 @@ var code = {
             scope.view.draw();
         },
 
-        attachEvents: function attachEvents () {
+        attachEvents: function () {
             var self = this,
                 paperTool = new this.activeScope.Tool()
             self.paperTool = paperTool;
@@ -62,7 +62,7 @@ var code = {
             };
         },
 
-        loadCanvas: function loadCanvas() {
+        loadCanvas: function () {
             paper.install(this);
             var activeScope = new paper.PaperScope();
             activeScope.setup(this.$el.find('#active')[0]);
@@ -178,7 +178,6 @@ var code = {
             line.onMouseDrag = function (event) {
                 lineObject.translate(event.delta);
             }
-	return 10;
         },
 
         _generatePolys: function () {
@@ -239,5 +238,15 @@ var code = {
 
         _isNullOrUndefined: function (object) {
             return object === null || typeof object === 'undefined';
+        },
+
+        _subtract: function (point1, point2) {
+            return new this.activeScope.Point(point1.x - point2.x, point1.y - point2.y);
+        },
+
+        _add: function (point1, point2) {
+            return new this.activeScope.Point(point1.x + point2.x, point1.y + point2.y);
         }
+
+
     }

@@ -1,26 +1,46 @@
 <html>
-	<head>
-		<title>Lazy YUI</title>
+    <head>
+        <title>Lazy YUI</title>
         <link type="text/css" rel="stylesheet" href="style.css">
         <script src="jquery-1.8.3.js"></script>
-		<link rel="stylesheet" href="vs.css">
-		<script src="highlight.pack.js"></script>
+        <link rel="stylesheet" href="vs.css">
+        <script src="highlight.pack.js"></script>
         <script src="constants.js"></script>
         <script src="code.js"></script>
         <script src="myfile.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('pre code').each(function(i, block) {
-				hljs.highlightBlock(block);
-				});
-			});
-		</script>
-	</head>
-	<body>
-		<p id="input">
-			#$@#
-		</p>
-		<pre><code class="javascript" id = "output"></code></pre>
-	</body>
+        <script>
+            $(document).ready(function() {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+    </head>             
+    <body>
+        <p id="input">
+            #$@#
+        </p>
+        <div id = "main">
+            <div id = "top" ></div>
+            <div id = "dialog">
+                <div id = "information">
+                    <div id = "header" > Lazy YUI </div>
+                    <div id = "codedata">
+                        <div id = "sloc" class = "data"></div>
+                        <div id = "skipped" class = "data"></div>
+                        <div id = "done" class = "data"></div>
+                        <div id = "bottom" class = "bottomcredit">&copy;Vihang Patel</div>
+                    </div>
+                </div>
+                <div id = "outputdialog">
+                    <div id = "header" > Documented Code </div>
+                    <div id = "codecontainer">
+                        <pre><code class="javascript" id = "output"></code></pre>  
+                    </div>
+                </div>
+            </div>
+            <div id = "bottom">Designed for Backbone YUI Automatic documentation under &copy;DE One Click Away Project</div>
+        </div>
+    </body>
 
 </html>
