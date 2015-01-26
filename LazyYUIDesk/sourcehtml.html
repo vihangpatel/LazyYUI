@@ -13,6 +13,15 @@
                 $('pre code').each(function(i, block) {
                     hljs.highlightBlock(block);
                 });
+                function copyToClipboard(text) {
+                    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+                }
+
+                // Use JQuery
+                //
+                $('#copyButton').click(function() {
+                    copyToClipboard($('#input').html());
+                });
             });
         </script>
     </head>             
@@ -34,6 +43,7 @@
                 </div>
                 <div id = "outputdialog">
                     <div id = "header" > Documented Code </div>
+                    <div id = "copyButton" > Copy Code </div>
                     <div id = "codecontainer">
                         <pre><code class="javascript" id = "output"></code></pre>  
                     </div>

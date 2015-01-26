@@ -27,6 +27,7 @@ $(document).ready(function(){
     }
 
     function fillUI(){
+        $('#input').html(codeText);
         $('#output').html(codeText);
         $("#sloc").html("Lines : " + codeText.split("\n").length);
         $("#skipped").html("Skipped YUI : " + skipped);

@@ -8,6 +8,22 @@
     font-family: "Segoe UI Light","sans-serif";
 }
 
+#copyButton {
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    background: #009688;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+}
+
+#copyButton:hover {
+    cursor: pointer;      
+}
+
 
 #codecontainer{
     top : -12px;
