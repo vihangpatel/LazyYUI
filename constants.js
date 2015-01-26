@@ -20,7 +20,7 @@ var FUNCTION_NAME_PREFIX = {
                                 "crop" : "Crops"  , "simulate" : "Simulates" , "trigger" : "Triggers" , "increase" : "Increases",
                                 "decrease" : "Decreases" , "subtract"  : "Subtracts",
                                 "shrink" : "Shrinks", "include" : "Includes", "append" : "Appends" , "calculate" : "Calculates" , "formulate" : "Formulates" , 
-                                "manipulate" : "Manipulates" , "init" : "Initializes" , "initialize" : "Initializes" ,
+                                "manipulate" : "Manipulates"  , "initialize" : "Initializes" , "init" : "Initializes" ,
                                 "load" : "Loads" , "keep" : "Keeps" , "start" : "Starts" , "stop" : "Stops" , "pause" : "Pauses" , "fill" : "Fills" , 
                                 "empty" : "Empties the" , "transfer" : "Transfers" , "traverse" : "Traverses", "expand" : "Expands" ,
                                 "draw" : "Draws" , "erase" : "Erases" , "clear" : "Clears", "display" : "Dislays " , "show" : "Shows" , "hide" : "Hides", 

@@ -13,7 +13,7 @@ function main(){
         createDocBlock(keys[i]);   
     }
     
-    console.clear();
+    //console.clear();
     console.log(codeText);
 }
 
