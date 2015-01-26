@@ -49,7 +49,8 @@ $(document).ready(function(){
         var docExist = DOCBLOCK_END.test(getCodeAt(lineObject.lineNo - 1)) ? true : false;
         if(docExist){
             console.info('doc block already exists for ', key);
-            return;
+            skipped++;
+            return false;
         }
 
         var functionSignature = FUNCTION_REGEXP.exec(lineObject.text);    

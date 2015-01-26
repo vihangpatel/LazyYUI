@@ -1,5 +1,19 @@
 var code = {
+  /**
+         * [[Description]]
+         * @attribute $el
+         * @type Object
+         * @default $('body')
+         */
         $el: $('body'),
+       
+
+       /**
+         * [[Description]]
+         * @attribute activeScope
+         * @type Object
+         * @default null
+         */
         activeScope: null,
         inactiveScope: null,
         paperTool: null,
@@ -248,5 +262,4 @@ var code = {
             return new this.activeScope.Point(point1.x + point2.x, point1.y + point2.y);
         }
 
-
-    }
+}
