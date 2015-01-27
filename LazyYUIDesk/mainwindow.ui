@@ -6,22 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
+    <width>604</width>
     <height>534</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>LazyYUIDesk</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>220</y>
+      <x>520</x>
+      <y>230</y>
       <width>75</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Segoe UI Light&quot;,&quot;sans-serif&quot;;</string>
     </property>
     <property name="text">
      <string>I am Lazy</string>
@@ -31,10 +34,42 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>401</width>
-      <height>471</height>
+      <y>70</y>
+      <width>501</width>
+      <height>421</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>581</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Segoe UI Light&quot;,&quot;sans-serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Paste only backbone dynamic part here . ( Code inside .extend(  { ..... }  ); excluding static part. )</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>581</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-family: &quot;Segoe UI Light&quot;,&quot;sans-serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Set chrome / firefox as a default program for .html extension. On pressing &quot;I am Lazy&quot; output will open.</string>
     </property>
    </widget>
   </widget>
@@ -43,7 +78,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>522</width>
+     <width>604</width>
      <height>21</height>
     </rect>
    </property>

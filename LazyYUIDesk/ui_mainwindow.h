@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -30,6 +31,8 @@ public:
     QWidget *centralWidget;
     QPushButton *pushButton;
     QTextEdit *tb_source;
+    QLabel *label;
+    QLabel *label_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -38,19 +41,28 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(522, 534);
+        MainWindow->resize(604, 534);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(430, 220, 75, 23));
+        pushButton->setGeometry(QRect(520, 230, 75, 23));
+        pushButton->setStyleSheet(QStringLiteral("font-family: \"Segoe UI Light\",\"sans-serif\";"));
         tb_source = new QTextEdit(centralWidget);
         tb_source->setObjectName(QStringLiteral("tb_source"));
-        tb_source->setGeometry(QRect(10, 10, 401, 471));
+        tb_source->setGeometry(QRect(10, 70, 501, 421));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(10, 10, 581, 16));
+        label->setStyleSheet(QStringLiteral("font-family: \"Segoe UI Light\",\"sans-serif\";"));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(10, 40, 581, 16));
+        label_2->setStyleSheet(QStringLiteral("font-family: \"Segoe UI Light\",\"sans-serif\";"));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 522, 21));
+        menuBar->setGeometry(QRect(0, 0, 604, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -66,8 +78,10 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "LazyYUIDesk", 0));
         pushButton->setText(QApplication::translate("MainWindow", "I am Lazy", 0));
+        label->setText(QApplication::translate("MainWindow", "Paste only backbone dynamic part here . ( Code inside .extend(  { ..... }  ); excluding static part. )", 0));
+        label_2->setText(QApplication::translate("MainWindow", "Set chrome / firefox as a default program for .html extension. On pressing \"I am Lazy\" output will open.", 0));
     } // retranslateUi
 
 };
