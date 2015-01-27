@@ -1,7 +1,11 @@
 var code = {
+	name : 'zeuslearning', 
 
-	name : 'zeus learning',
+	namePlace : 'Mumbai',
 
-	place : false
+	isGood : true,
 
+	empCount : 450,
+
+	empData : []
 }

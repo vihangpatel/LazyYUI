@@ -183,7 +183,7 @@ $(document).ready(function(){
         for(var i = 0 ; i < lines.length ; i++){
             lineAtIndex = lines[i].trimLeft();
             var index = getMatch( lineAtIndex , key );
-            if(index === 0 && !isInsideFunctionBlock(key,lineAtIndex)){
+            if(index !== null && !isInsideFunctionBlock(key,lineAtIndex)){
                 bGo = true;
                 lineNo = i;
                 indentation = INDENTATION_REGEXP.exec(lines[i])[0];
@@ -196,9 +196,11 @@ $(document).ready(function(){
 
     function getMatch(sourceLine , key ){
         sourceLine = sourceLine.trim();
-        var index = sourceLine.search(key);
+        var regExpStr = key + '\\s*:',
+			regExp = new RegExp(regExpStr),
+			index = regExp.exec(sourceLine);
         // Handle $ sign differently
-        if(index === -1 && sourceLine[0] === '$' && key[0] === '$'){
+        if(index === null && sourceLine[0] === '$' && key[0] === '$'){
             sourceLine = sourceLine.slice(1);
             key = key.slice(1);
             return getMatch( sourceLine , key );
