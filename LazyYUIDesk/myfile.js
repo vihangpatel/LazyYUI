@@ -76,7 +76,7 @@ $(document).ready(function(){
         text.push(' * @attribute ' + key );
         text.push(' * @type ' + getAttrType( key ) );
         text.push(' * @default ' +  defaultVal);   
-        text.push(' */');
+        text.push('*/');
         console.log(getYUITextFromArray(text , lineObject.indentation));
         insertYUIDocBlock(getYUITextFromArray(text , lineObject.indentation) , lineObject.lineNo);
     }

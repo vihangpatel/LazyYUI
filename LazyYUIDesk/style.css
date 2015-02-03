@@ -101,10 +101,12 @@
 
 #codedata{
     height: inherit;
-    top : 20px;
+    /* top : 20px; */
     left: 0px;
     float: left;
     width: 100%;
+    position: relative;
+    height: calc(100% - 71px);
 }
 
 #outputdialog{
@@ -147,4 +149,21 @@
 ::selection {
     color: white;
     background: rgba(0, 150, 136, 0.5);
+}
+
+#reportButton {
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    margin: auto;
+    background: #009688;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    left: 25%;
+    bottom: 23%;
+}
+
+#reportButton:hover {
+    cursor: pointer;      
 }
